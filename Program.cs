@@ -14,7 +14,9 @@ namespace PraticingLambdaExpression
             //RetrievingthoRecords_ForAgeIs_LessthanEighteenandgreaterthanThirteen(person);
             //RetrievingAverageAge(person);
             //CheckSpecficName(person);
-            RetrievingRexords_ForAge_GreaterThanSixty(person);
+            //RetrievingRexords_ForAge_GreaterThanSixty(person);
+            RemoveSpecficName(person);
+
 
         }
         private static void AddRecord(List<Person> ListPersonInCity)
@@ -65,6 +67,20 @@ namespace PraticingLambdaExpression
         private static void RetrievingRexords_ForAge_GreaterThanSixty(List<Person> ListPersonInCity)
         {
             foreach (Person person in ListPersonInCity.FindAll(e => e.Age > 60))
+            {
+                Console.WriteLine("Name: " + person.Name + " Age: " + person.Age);
+            }
+        }
+        private static void RemoveSpecficName(List<Person> ListPersonInCity)
+        {
+            foreach (Person person in ListPersonInCity)
+            {
+                Console.WriteLine("Name: " + person.Name + " Age: " + person.Age);
+            }
+            ListPersonInCity.RemoveAll(e => e.Name == "Sam");
+            Console.WriteLine("---------------------------");
+            Console.WriteLine("After Removing");
+            foreach (Person person in ListPersonInCity)
             {
                 Console.WriteLine("Name: " + person.Name + " Age: " + person.Age);
             }
