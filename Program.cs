@@ -13,7 +13,8 @@ namespace PraticingLambdaExpression
             //RetrievingTopTwoRecord_ForAgeIs_LessthanSixty(person);
             //RetrievingthoRecords_ForAgeIs_LessthanEighteenandgreaterthanThirteen(person);
             //RetrievingAverageAge(person);
-            CheckSpecficName(person);
+            //CheckSpecficName(person);
+            RetrievingRexords_ForAge_GreaterThanSixty(person);
 
         }
         private static void AddRecord(List<Person> ListPersonInCity)
@@ -59,6 +60,13 @@ namespace PraticingLambdaExpression
             else
             {
                 Console.WriteLine("The Name does not exists");
+            }
+        }
+        private static void RetrievingRexords_ForAge_GreaterThanSixty(List<Person> ListPersonInCity)
+        {
+            foreach (Person person in ListPersonInCity.FindAll(e => e.Age > 60))
+            {
+                Console.WriteLine("Name: " + person.Name + " Age: " + person.Age);
             }
         }
 
