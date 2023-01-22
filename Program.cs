@@ -10,7 +10,8 @@ namespace PraticingLambdaExpression
             Console.WriteLine("Welcome to Person Data Management");
             List<Person> person = new List<Person>();
             AddRecord(person);
-            RetrievingTopTwoRecord_ForAgeIs_LessthanSixty(person);
+            //RetrievingTopTwoRecord_ForAgeIs_LessthanSixty(person);
+            RetrievingthoRecords_ForAgeIs_LessthanEighteenandgreaterthanThirteen(person);
 
         }
         private static void AddRecord(List<Person> ListPersonInCity)
@@ -30,6 +31,13 @@ namespace PraticingLambdaExpression
         private static void RetrievingTopTwoRecord_ForAgeIs_LessthanSixty(List<Person> ListPersonInCity)
         {
             foreach (Person person in ListPersonInCity.FindAll(e => e.Age < 60).Take(2))
+            {
+                Console.WriteLine("Name: " + person.Name + " Age: " + person.Age);
+            }
+        }
+        private static void RetrievingthoRecords_ForAgeIs_LessthanEighteenandgreaterthanThirteen(List<Person> ListPersonInCity)
+        {
+            foreach (Person person in ListPersonInCity.FindAll(e => e.Age < 18 && e.Age > 13))
             {
                 Console.WriteLine("Name: " + person.Name + " Age: " + person.Age);
             }
