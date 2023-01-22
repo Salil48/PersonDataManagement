@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using PersonDataManagement;
+using System.Collections.Generic;
 
 namespace PraticingLambdaExpression
 {
@@ -7,6 +8,24 @@ namespace PraticingLambdaExpression
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Person Data Management");
+            List<Person> person = new List<Person>();
+            AddRecord(person);
+
         }
+        private static void AddRecord(List<Person> ListPersonInCity)
+        {
+            ListPersonInCity.Add(new Person("1223225", "John", "12 Main street", 15));
+            ListPersonInCity.Add(new Person("4324444", "Sam", "14 Main street", 25));
+            ListPersonInCity.Add(new Person("3243434", "Elan", "12 Main street", 35));
+            ListPersonInCity.Add(new Person("3423666", "John", "14 Main street", 45));
+            ListPersonInCity.Add(new Person("6574754", "Sue", "12 Main street", 55));
+            ListPersonInCity.Add(new Person("4688865", "Rita", "12 Main street", 65));
+            ListPersonInCity.Add(new Person("3433245", "Mith", "17 Main street", 75));
+            ListPersonInCity.Add(new Person("3244233", "Mac", "19 Main street", 85));
+            ListPersonInCity.Add(new Person("3264645", "Ramesh", "16 Main street", 95));
+            ListPersonInCity.Add(new Person("7869977", "Geetha", "10 Main street", 14));
+
+        }
+
     }
 }
