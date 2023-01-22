@@ -11,7 +11,8 @@ namespace PraticingLambdaExpression
             List<Person> person = new List<Person>();
             AddRecord(person);
             //RetrievingTopTwoRecord_ForAgeIs_LessthanSixty(person);
-            RetrievingthoRecords_ForAgeIs_LessthanEighteenandgreaterthanThirteen(person);
+            //RetrievingthoRecords_ForAgeIs_LessthanEighteenandgreaterthanThirteen(person);
+            RetrievingAverageAge(person);
 
         }
         private static void AddRecord(List<Person> ListPersonInCity)
@@ -41,6 +42,11 @@ namespace PraticingLambdaExpression
             {
                 Console.WriteLine("Name: " + person.Name + " Age: " + person.Age);
             }
+        }
+        private static void RetrievingAverageAge(List<Person> ListPersonInCity)
+        {
+            double avgAge = ListPersonInCity.Average(e => e.Age);
+            Console.WriteLine("The average age is " + avgAge);
         }
 
 
